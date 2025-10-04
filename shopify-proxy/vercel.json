@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/**/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    }
+  ],
+  "env": {
+    "SHOPIFY_STOREFRONT_TOKEN": "@shopify-storefront-token",
+    "SHOPIFY_SHOP_DOMAIN": "@shopify-shop-domain",
+    "SHOPIFY_API_VERSION": "2024-01"
+  }
+}
